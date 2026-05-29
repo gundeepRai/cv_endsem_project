@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+outputs/
+videos/processed/
+
+# Model files
+*.pt
+*.pth
+*.weights
+*.onnx
+
+
+.vscode/
