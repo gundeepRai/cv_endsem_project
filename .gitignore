@@ -219,6 +219,7 @@ __marimo__/
 
 outputs/
 videos/processed/
+videos/dataset/
 
 # Model files
 *.pt
@@ -228,3 +229,5 @@ videos/processed/
 
 
 .vscode/
+
+
