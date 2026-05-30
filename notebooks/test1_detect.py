@@ -22,6 +22,9 @@ if not cap.isOpened():
 
 print("Video opened. Press 'q' to quit.")
 
+# stage 2 : storing all stud positions
+person_positions = []
+
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
@@ -39,9 +42,25 @@ while cap.isOpened():
             
             if cls == 0:
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+                center_x = (x1+x2) // 2     #Finding x coordinate of position of student
+                bottom_y = y2               # y coordinate of pos of stud
+                person_position = (center_x, bottom_y) # position of student
+                # person_positions.append((center_x, bottom_y))
+
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.circle(frame, (center_x, bottom_y), 5, (0, 0, 255), -1)
                 cv2.putText(frame, label, (x1, y1 - 10),
                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                cv2.putText(
+                    frame,
+                    f"({center_x},{bottom_y})",
+                    (center_x + 10, bottom_y),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5,
+                    (0, 255, 0),
+                    1
+                )
     
     cv2.imshow("Person Detection", frame)
     
@@ -51,6 +70,7 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 print("Done!")
+# print(person_positions)
 
 
 
