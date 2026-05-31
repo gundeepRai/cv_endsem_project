@@ -75,44 +75,6 @@ print("Done!")
 
 
 
-# import cv2
-# from ultralytics import YOLO
-# import os
 
-# # Load model
-# model = YOLO('yolov8n.pt')
 
-# # Load video
-# cap = cv2.VideoCapture('../videos/raw/test1.mp4.mp4')  # CHANGE THIS to your video path
 
-# while cap.isOpened():
-#     ret, frame = cap.read()
-#     if not ret:
-#         break
-    
-#     # Run YOLO inference
-#     results = model(frame)
-    
-#     # Process detections
-#     for result in results:
-#         boxes = result.boxes
-#         for box in boxes:
-#             cls = int(box.cls[0])
-#             confidence = float(box.conf[0])
-#             label = f"Person {confidence:.2f}"
-            
-#             if cls == 0:  # person
-#                 x1, y1, x2, y2 = map(int, box.xyxy[0])
-#                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-#                 cv2.putText(frame, label, (x1, y1 - 10), 
-#                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-    
-#     # Display frame
-#     cv2.imshow("Person Detection", frame)
-    
-#     # Press q to quit, or wait 25ms between frames
-#     if cv2.waitKey(25) & 0xFF == ord('q'):
-#         break
-
-# cap.release()
-# cv2.destroyAllWindows()
