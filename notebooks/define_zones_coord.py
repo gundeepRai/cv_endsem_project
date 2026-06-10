@@ -4,16 +4,29 @@ Click 4 corners per zone in order: TOP-LEFT → TOP-RIGHT → BOTTOM-RIGHT → B
 Press 'q' to finish early, 'r' to reset current zone, 'u' to undo last point.
 """
 
-""" ++++++++++++++++++++++++++++++++++ STAGE:3 FINDING COORDINATES OF ZONES ++++++++++++++++++++++++++++++++++++++++"""
 
 import cv2
 import json
 import numpy as np
+import sys
+import os
+
+# Require a video filename argument
+if len(sys.argv) < 2:
+    print("Usage: python test1_detect.py <video_filename>")
+    sys.exit(1)
 
 # ==================== CONFIGURATION ====================
-VIDEO_PATH = "././videos/raw/test1.mp4"          # Change per video
-OUTPUT_JSON = "././config/zones_test_video1.json"   # Change per video
+video_name = sys.argv[1]
+VIDEO_PATH = os.path.join("././videos/raw", video_name)
+
+# Match output JSON name to video name automatically
+json_name = f"zones_{os.path.splitext(video_name)[0]}.json"
+OUTPUT_JSON = os.path.join("././config", json_name)
+
 NUM_ZONES = 4                              # Number of zones to define
+# NUM_ZONES = 2                              # Number of zones to define
+
 POLYGON_COLOR = (100, 100, 255)            # Dull red/pink (BGR)
 POLYGON_ALPHA = 0.35                       # Transparency level
 # =======================================================

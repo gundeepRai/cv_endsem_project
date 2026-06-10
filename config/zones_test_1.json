@@ -1,0 +1,56 @@
+{
+  "zone_1": {
+    "top_left": [
+      432,
+      217
+    ],
+    "top_right": [
+      1135,
+      100
+    ],
+    "bottom_right": [
+      1360,
+      271
+    ],
+    "bottom_left": [
+      609,
+      457
+    ]
+  },
+  "zone_2": {
+    "top_left": [
+      670,
+      443
+    ],
+    "top_right": [
+      1439,
+      247
+    ],
+    "bottom_right": [
+      1837,
+      480
+    ],
+    "bottom_left": [
+      1027,
+      951
+    ]
+  },
+  "zone_3": {
+    "top_left": [
+      191,
+      316
+    ],
+    "top_right": [
+      440,
+      243
+    ],
+    "bottom_right": [
+      950,
+      958
+    ],
+    "bottom_left": [
+      361,
+      958
+    ]
+  }
+}

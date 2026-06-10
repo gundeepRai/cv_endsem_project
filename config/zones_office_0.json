@@ -1,0 +1,74 @@
+{
+  "zone_1": {
+    "top_left": [
+      1,
+      348
+    ],
+    "top_right": [
+      227,
+      285
+    ],
+    "bottom_right": [
+      675,
+      692
+    ],
+    "bottom_left": [
+      5,
+      689
+    ]
+  },
+  "zone_2": {
+    "top_left": [
+      239,
+      282
+    ],
+    "top_right": [
+      578,
+      171
+    ],
+    "bottom_right": [
+      905,
+      272
+    ],
+    "bottom_left": [
+      567,
+      570
+    ]
+  },
+  "zone_3": {
+    "top_left": [
+      587,
+      170
+    ],
+    "top_right": [
+      726,
+      132
+    ],
+    "bottom_right": [
+      990,
+      192
+    ],
+    "bottom_left": [
+      907,
+      272
+    ]
+  },
+  "zone_4": {
+    "top_left": [
+      575,
+      580
+    ],
+    "top_right": [
+      1000,
+      199
+    ],
+    "bottom_right": [
+      1122,
+      221
+    ],
+    "bottom_left": [
+      996,
+      692
+    ]
+  }
+}
