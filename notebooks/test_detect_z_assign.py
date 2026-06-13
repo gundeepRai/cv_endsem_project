@@ -19,6 +19,11 @@ import os
 import sys
 from typing import Dict, List, Tuple, Optional
 
+# from test_detect_z_assign import (
+#     load_zones,
+#     detect_people,
+# )
+
 
 # ------------------ Reusable functions ------------------
 
